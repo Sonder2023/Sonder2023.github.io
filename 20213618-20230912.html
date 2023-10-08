@@ -1,0 +1,112 @@
+
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>web2</title>
+  <style type="text/css">
+  body{
+  
+  font-size:25px;  /*控制上下之的间距*/ 
+  color:teal;     /*控制边框的颜色*/ 
+  text-align:"center"
+ }
+div{                             /*可以起分割的作用，分开内容进行分段*/
+	 width:1200px;         /*控制边框的大小宽度*/   
+	 border:2px solid ;
+	 border-radius:6em;   /*控制边框的四个圆角的弧度*/
+	 margin:1em auto ;
+	 padding:2em;         /*控制边框的内边距*/
+	 padding-bottom:4em;
+	 text-align:center;
+	 line-height:2em;      /*控制边框的行高 可以将字间的距离拉开*/
+     }
+
+    .greyFont{color:grey}           /*可以控制各个段落的颜色*/
+        .blueFont{color:navy}
+		    .indigoFont{color:indigo;}
+			 
+
+p{
+     font-size:40px;
+     text-align:center;
+	 font-family:黑体;
+	 font-style:仿宋;
+     align="center"
+    }
+  h1
+  {
+     font-size:50px;
+	 text-align:center;
+     font-family:黑体;
+     font-style:宋体;
+     align="center"
+	}
+  </style>
+</head>
+<body>
+<h1 id="special" >
+    git bash实验报告
+</h1>
+ <div>    
+   <p text-align:center;>
+  	git、shell、git bash简介
+   </p>
+   <p class="greyFont"  >
+    git<br>
+    版本控制工具，作用是将本地代码备份到服务器，程序员可以在任何有电脑和网络的地方将代码下载下来完成编程工作。主要功能有合作开发、上传代码到服务器、下载代码到本地、创建与合并分支等其本质是一个命令行的命令，跟ls、mv、rm等命令是一样的。
+   </p>
+   <p class="greenFont"  >
+    shell<br>
+    命令行，谈到命令行时，我们实际上指的是shell。shell是一个程序，并将它们传递给操作系统执行。几乎所有的Linux发行版都提供了一个来自GNU项目的shell程序。
+   </p>
+   <p  class="blueFont" >
+    git bash<br>
+    windows的命令提示符(cmd)不能直接使用git命令，git bash就是在windows下使用git命令的模拟环境终端，windows通过git bash模拟命令行在unix系统下的执行环境，通过这个模拟环境来执行git命令。
+   </p>
+ </div> 
+  <div >   
+    <p text-align:center;>
+  	实验命令
+	</p>
+    <p class="greenFont" >
+	创建各类型文件夹管理文件：mkdir pdf;mkdir mp3;mkdi txt<br>
+	将文件放入指定文件夹中： mv /d/*.后缀 文件夹名字<br>
+    ls 列出指定文件夹的内容<br>
+	将videoClips文件解包：tar -Xf videoClips<br>
+	删除包文件：rm videoClips <br>
+	进入cd /d/lgs/videoMP4通过ls列出解包文件<br>
+    </p>
+  </div>
+  <div >   
+    <p text-align:center;>
+  	总结
+	</p>
+    <p class="indigoFont" >
+	一个好的命令行界面是一种与计算机通信的出色表达方式，就像人类的文字一样。据说，“图形用户界面使简单的任务变得容易，而命令行界面使困难的任务变得成为可能”，“学习Shell”，开始了我们对命令行的基本语言的探索，包括命令的结构、文件系统导航、命令行编辑，以及为命令寻找帮助和文档。<br>
+    <br>
+	</p>
+	<p class="greyFont"  >
+     Git Bash是一个命令行工具，它提供了一个类Unix的Shell环境，以下为我学习的一些常见的Linux命令：<br>
+	 cd ( change directory ) 切换目标
+     如：进入D目录：cd /d；进入D目录下的子目录lk：cd /D/lk；<br>
+     ls ( list ) 查看当前目录下的内容<br>
+     ls -al 包括隐藏文件和以 . 开头的文件<br>
+     mkdir ( make directory ) 创建目录<br>
+     rmdir ( remove directory )删除文件夹；或者rm -rf（目录可以有文件）<br>
+     touch 创建文件：touch lk.txt<br>
+     cat 查看文件内容 :cat lk.txt<br>
+     cp ( copy ) 复制文件<br>
+     cp -r A/* B 复制  A 文件夹下的所有子文件、目录到 B 文件夹<br>
+     rm ( remove ) 删除文件<br>
+     mv ( move ) 移动文件或重命名<br>
+	 将文件放入指定文件夹中： mv /d/*.后缀 文件夹名字<br>
+	 等等
+    </p>
+	 <p class="indigoFont" >
+	 
+    <br>
+	</p>
+  </div>
+ </body>
+</html>
