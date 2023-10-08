@@ -1,16 +1,54 @@
+
 <!doctype html>
-<html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <title>my web page</title>
 
-	<head>
-		<meta charset="utf-8">
-		<title>这是一个个人网页</title>
-		<style type="text/css">
-			boby{
-				margin: 0;
-				padding: 0;
-			}
+ </head>
+ <style>
+ body {
+   background: url(https://pica.zhimg.com/80/v2-8de701cf9780ab4e0b7c91c92352eae8_1440w.webp?source=1940ef5c) no-repeat;
+  background-size:  cover ;
+  background-attachment: fixed;
+ }  
+ 
+header, nav, footer {
+    padding: 35px;
+}
 
-			a {
+header {
+    
+    background-color: #333;
+    color: #fff;
+	text-align:center;
+	
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+	text-align:center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+a {
 				text-decoration: none;
 			}
 
@@ -26,56 +64,47 @@
 				*zoom: 1;
 			}
 
-			body {
-				background: url(https://images4.alphacoders.com/221/thumbbig-221508.webp) no-repeat;
-				background-size: cover;
-				background-attachment: fixed;
-			}
-
 			.content {
 				width: 900px;
-				height: 500px;
-				margin: 200px auto 0 auto;
-				border-radius: 10px;
+				height: 600px;
+				margin: 100px auto 100px auto;
+				border-radius: 20px;
 				background-color: rgba(236, 236, 236, 0.59);
 				transition: all 1.0s;
-				/*box-shadow: 0px 0px 20px rgba(0,0,0,0.3);*/
 			}
 
 			.content img {
 				float: left;
-				width: 200px;
-				height: 200px;
+				width: 190px;
+				height: 190px;
 				margin: 150px 0 0 80px;
 				border-radius: 100px;
 
-			}
+			}/*  编辑图像在content里的位置 */
 
 			.content:hover {
-				box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.52);
-			}
+				box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.52);
+			}/* 边框阴影 */
 
 			.content_r {
 				float: right;
 				width: 500px;
 				margin: 80px 60px 0 0;
-			}
+				
+			}/* 按钮边框样式 */
 
 			.content_l {
 				float: left;
 				width: 100%;
 				text-align: center;
-			}
+			}/* 按钮里字体的样式 */
 
-			.content_l h5 {
-
-				font-size: 17px;
-			}
-
+			
 			.cc {
 				margin-top: 10px;
 				color: #1F2023;
-				font-size: 18px;
+				font-size: 22px;
+				font-family:Comic Sans Ms;
 			}
 
 			.color_1 {
@@ -83,9 +112,6 @@
 				font-size: 18px;
 			}
 
-			.deeppink {
-				color: deeppink;
-			}
 
 			.link {
 				margin-top: 30px;
@@ -97,62 +123,78 @@
 				width: 120px;
 				height: 45px;
 				margin: 5px 5px 0 0;
-				/*	padding: 0 15px;*/
 				color: #fff;
 				line-height: 45px;
 				transition: all 0.8s;
-				/*	background-color: deeppink;*/
-
-			}
+				}
 
 			.link a:hover {
 				background-color: rgba(0, 201, 243, 0.35);
 			}
-
-			.deeppink_1 {
-				background-color: deeppink;
+			.SeaGreen {
+				background-color: SeaGreen;
 			}
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
 
-			.dodgerblue {
-				background-color: cyan;
-			}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 
-			.magenta {
-				background-color: blue;
-			}
+.slide.active {
+    opacity: 1;
+}
 
-			.orange {
-				background-color: orange;
-			}
-		</style>
-	</head>
-
-	<body>
-		<div class="content">
+</style>
+ <body>
+    <header>
+        <h1>欢迎来到我的个人网站</h1>
+    </header>
+    
+   <!--  <nav>
+        <ul>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#projects">项目</a></li>
+            <li><a href="#contact">联系我</a></li>
+        </ul>
+    </nav> -->
+    
+    <div class="content">
 			<img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.KTVW5BQKz01Eq3b3J44ZtQHaED?w=314&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="">
 			<div class="content_r clearfix">
 				<div class="content_l clearfix">
 					<h2>Hi， Welcome here ！</h2>
-					<p class="cc">欢迎来到我的主页</p>
-					<p class="cc">希望可以爱上学习</p>
-					<br>
-					<p class="deeppink">只要路是对的，就不怕路远。</p>
-					<p class="deeppink">As long as the road is right, you are not afraid of the distance.</p>
+					<p class="cc">My homework is as follows:</p>
 					<div class="link">
-						<a href="20213618-1.html" class="orange" target="_blank">第一次作业</a>
-						<a href="20213618-2.html" class="deeppink_1" target="_blank">第二次作业</a>
-						<a href="20213618-3.html" class="magenta" target="_blank">第三次作业</a>
-						<a href="20213618-4.html" class="orange" target="_blank">第四次作业</a>
-                        <a href="20213618-5.html" class="magenta" target="_blank">第五次作业</a>
-                        <a href="20213618-6.html" class="orange" target="_blank">第六次作业</a>
-                        <a href="20213618-7.html" class="deeppink_1" target="_blank">第七次作业</a>
-                        <a href="20213618-8.html" class="magenta" target="_blank">第八次作业</a>
-                        <a href="20213618-9.html" class="dodgerblue" target="_blank">第九次作业</a>
+						<a href="20213618-20230905.html" class="SeaGreen" target="_blank">一</a>
+						<a href="20213618-20230912.html" class="SeaGreen" target="_blank">二</a>
+						<a href="20213618-20230919.html" class="SeaGreen" target="_blank">三</a>
+						<a href="20213618-20230926.html" class="SeaGreen" target="_blank">四</a>
+                        <!-- <a href="20213618-5.html" class="SeaGreen" target="_blank"></a> -->
+                        <!-- <a href="20213618-6.html" class="SeaGreen" target="_blank">第六次作业</a>
+                        <a href="20213618-7.html" class="SeaGreen" target="_blank">第七次作业</a>
+                        <a href="20213618-8.html" class="SeaGreen" target="_blank">第八次作业</a>
+                        <a href="20213618-9.html" class="SeaGreen" target="_blank">第九次作业</a> -->
 
 					</div>
 				</div>
 			</div>
 		</div>
-	</body>
+    
+    <footer>
+        <p>版权所有 &copy; sonder2023|my web page</p>
+    </footer>
+	
+ </body>
 
 </html>
