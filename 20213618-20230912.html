@@ -1,112 +1,236 @@
-
 <!doctype html>
 <html lang="en">
  <head>
   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
   <title>web2</title>
-  <style type="text/css">
-  body{
-  
-  font-size:25px;  /*控制上下之的间距*/ 
-  color:teal;     /*控制边框的颜色*/ 
-  text-align:"center"
- }
-div{                             /*可以起分割的作用，分开内容进行分段*/
-	 width:1200px;         /*控制边框的大小宽度*/   
-	 border:2px solid ;
-	 border-radius:6em;   /*控制边框的四个圆角的弧度*/
-	 margin:1em auto ;
-	 padding:2em;         /*控制边框的内边距*/
-	 padding-bottom:4em;
-	 text-align:center;
-	 line-height:2em;      /*控制边框的行高 可以将字间的距离拉开*/
-     }
+  <style>* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+#iz27{
+  background-color:rgba(236,236,236,0.59);
+}
+#iotw2{
+  color:rgb(0, 128, 128);
+  font-family:黑体;
+  font-size:27px;
+  text-align:center;
+}
 
-    .greyFont{color:grey}           /*可以控制各个段落的颜色*/
-        .blueFont{color:navy}
-		    .indigoFont{color:indigo;}
-			 
+#il5nk{
+  color:rgb(0, 128, 128);
+  font-family:黑体;
+  font-size:40px;
+  text-align:center;
+}
 
-p{
-     font-size:40px;
-     text-align:center;
-	 font-family:黑体;
-	 font-style:仿宋;
-     align="center"
-    }
-  h1
-  {
-     font-size:50px;
-	 text-align:center;
-     font-family:黑体;
-     font-style:宋体;
-     align="center"
-	}
-  </style>
-</head>
-<body>
-<h1 id="special" >
-    git bash实验报告
-</h1>
- <div>    
-   <p text-align:center;>
-  	git、shell、git bash简介
-   </p>
-   <p class="greyFont"  >
-    git<br>
-    版本控制工具，作用是将本地代码备份到服务器，程序员可以在任何有电脑和网络的地方将代码下载下来完成编程工作。主要功能有合作开发、上传代码到服务器、下载代码到本地、创建与合并分支等其本质是一个命令行的命令，跟ls、mv、rm等命令是一样的。
-   </p>
-   <p class="greenFont"  >
-    shell<br>
-    命令行，谈到命令行时，我们实际上指的是shell。shell是一个程序，并将它们传递给操作系统执行。几乎所有的Linux发行版都提供了一个来自GNU项目的shell程序。
-   </p>
-   <p  class="blueFont" >
-    git bash<br>
-    windows的命令提示符(cmd)不能直接使用git命令，git bash就是在windows下使用git命令的模拟环境终端，windows通过git bash模拟命令行在unix系统下的执行环境，通过这个模拟环境来执行git命令。
-   </p>
- </div> 
-  <div >   
-    <p text-align:center;>
-  	实验命令
-	</p>
-    <p class="greenFont" >
-	创建各类型文件夹管理文件：mkdir pdf;mkdir mp3;mkdi txt<br>
-	将文件放入指定文件夹中： mv /d/*.后缀 文件夹名字<br>
-    ls 列出指定文件夹的内容<br>
-	将videoClips文件解包：tar -Xf videoClips<br>
-	删除包文件：rm videoClips <br>
-	进入cd /d/lgs/videoMP4通过ls列出解包文件<br>
-    </p>
+.htmlpage-row{
+  display:table;
+  padding-top:10px;
+  padding-right:10px;
+  padding-bottom:10px;
+  padding-left:10px;
+  width:100%;
+}
+.htmlpage-cell{
+  width:8%;
+  display:table-cell;
+  height:75px;
+}
+.c3667{
+  font-size:47px;
+  text-align:center;
+  font-family:Comic Sans MS, cursive, sans-serif;
+  color:#501e05;
+}
+.c3779{
+  padding:10px;
+  font-size:36px;
+  color:#610000;
+}
+.c3845{
+  color:#003939;
+  font-family:黑体;
+  font-size:36px;
+  text-align:center;
+}
+.c4086{
+  color:#003939;
+  font-family:Arial Black, Gadget, sans-serif;
+  font-size:36px;
+  text-align:center;
+}
+.c4374{
+  color:#003939;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align:center;
+}
+.c4721{
+  padding:10px;
+  font-size:33px;
+}
+.c4802{
+  padding:10px;
+}
+.c4874{
+  color:#610000;
+  font-family:黑体;
+  font-size:33px;
+  text-align:center;
+}
+.c5461{
+  padding:10px;
+  text-align:center;
+}
+.c5920{
+  padding:10px;
+  font-size:20px;
+}
+.c6073{
+  color:#003939;
+  font-family:Comic Sans MS, cursive, sans-serif;
+  font-size:27px;
+  text-align:center;
+}
+.c6542{
+  color:#501e05;
+  font-family:Comic Sans MS, cursive, sans-serif;
+  font-size:30px;
+  text-align:center;
+}
+.c6777{
+  padding:10px;
+  font-size:27px;
+}
+.c6834{
+  text-align:start;
+  font-size:27px;
+  color:#501e05;
+}
+.c7746{
+  color:#000000;
+  font-family:Comic Sans MS, cursive, sans-serif;
+  font-size:30px;
+  text-align:center;
+}
+.c8087{
+  color:#501e05;
+  font-family:Arial Black, Gadget, sans-serif;
+  font-size:31px;
+  text-align:center;
+}
+.c8105{
+  color:rgb(128, 128, 128);
+  font-family:黑体;
+  font-size:40px;
+  text-align:center;
+}
+.c8114{
+  color:rgb(128, 128, 128);
+  font-family:Comic Sans MS, cursive, sans-serif;
+  font-size:30px;
+  text-align:center;
+}
+
+.c8438{
+  color:rgb(128, 128, 128);
+  font-family:Comic Sans MS, cursive, sans-serif;
+  font-size:30px;
+  text-align:center;
+}
+@media (max-width: 768px){
+  .htmlpage-cell{
+    width:100%;
+    display:block;
+  }
+}
+</style>
+ </head>
+ <body id="iz27">
+  <h1 id="special" class="c3667">git bash实验报告
+  </h1>
+  <div id="ioei" class="c3779">一、
+    <span id="idwa" class="c3845">git、shell、git bash简介</span>
   </div>
-  <div >   
-    <p text-align:center;>
-  	总结
-	</p>
-    <p class="indigoFont" >
-	一个好的命令行界面是一种与计算机通信的出色表达方式，就像人类的文字一样。据说，“图形用户界面使简单的任务变得容易，而命令行界面使困难的任务变得成为可能”，“学习Shell”，开始了我们对命令行的基本语言的探索，包括命令的结构、文件系统导航、命令行编辑，以及为命令寻找帮助和文档。<br>
-    <br>
-	</p>
-	<p class="greyFont"  >
-     Git Bash是一个命令行工具，它提供了一个类Unix的Shell环境，以下为我学习的一些常见的Linux命令：<br>
-	 cd ( change directory ) 切换目标
-     如：进入D目录：cd /d；进入D目录下的子目录lk：cd /D/lk；<br>
-     ls ( list ) 查看当前目录下的内容<br>
-     ls -al 包括隐藏文件和以 . 开头的文件<br>
-     mkdir ( make directory ) 创建目录<br>
-     rmdir ( remove directory )删除文件夹；或者rm -rf（目录可以有文件）<br>
-     touch 创建文件：touch lk.txt<br>
-     cat 查看文件内容 :cat lk.txt<br>
-     cp ( copy ) 复制文件<br>
-     cp -r A/* B 复制  A 文件夹下的所有子文件、目录到 B 文件夹<br>
-     rm ( remove ) 删除文件<br>
-     mv ( move ) 移动文件或重命名<br>
-	 将文件放入指定文件夹中： mv /d/*.后缀 文件夹名字<br>
-	 等等
-    </p>
-	 <p class="indigoFont" >
-	 
-    <br>
-	</p>
+  <div class="htmlpage-row">
+    <div class="htmlpage-cell">
+      <div id="i2o9w" class="c4721">
+        <span id="ikm6k" class="c4874">git</span>
+      </div>
+      <div id="ist67" class="c5920">
+        <span id="ieez7" class="c6073">版本控制工具，作用是将本地代码备份到服务器，程序员可以在任何有电脑和网络的地方将代码下载下来完成编程工作。主要功能有合作开发、上传代码到服务器、下载代码到本地、创建与合并分支等其本质是一个命令行的命令，跟ls、mv、rm等命令是一样的。</span>
+      </div>
+    </div>
+    <div class="htmlpage-cell">
+      <div id="ict1y" class="c4802">
+        <span id="ind89" class="c4874">shell</span>
+      </div>
+      <div id="is35q" class="c4802">
+        <span id="ijrmr" class="c6073">命令行，谈到命令行时，我们实际上指的是shell。shell是一个程序，并将它们传递给操作系统执行。几乎所有的Linux发行版都提供了一个来自GNU项目的shell程序。</span>
+      </div>
+    </div>
   </div>
- </body>
+  <div id="in31k" class="c5461">
+    <span id="ilshi" class="c4874">git bash</span>
+  </div>
+  <div id="irwbv" class="c4802">
+    <span id="i1ajh" class="c6542">windows的命令提示符(cmd)不能直接使用git命令，git bash就是在windows下使用git命令的模拟环境终端，windows通过git bash模拟命令行在unix系统下的执行环境，通过这个模拟环境来执行git命令。</span>
+  </div>
+  <div class="c3779">
+    <span id="iqcy5" class="c4086">二、实验命令</span>
+    <br/>
+  </div>
+  <div id="i4f6b" class="c6777">
+    <div id="ivvcm" class="c6834">
+      <span id="iotw2">1.创建各类型文件夹管理文件：mkdir pdf;mkdir mp3;mkdi txt<br/>2.</span>
+      <span id="iotw2">将文件放入指定文件夹中： mv /d/*.后缀 文件夹名字，</span>
+      <span id="iotw2">ls 列出指定文件夹的内容</span>
+      <span id="iotw2"><br/>3.</span>
+      <span id="iotw2">将videoClips文件解包：tar -Xf videoClips</span>
+      <br id="il5nk"/>
+      <span id="iotw2">删除包文件：rm videoClips</span>
+      <span id="iotw2"><br/>4.</span>
+      <span id="iotw2">进入cd /d/lgs/videoMP4通过ls列出解包文件</span>
+    </div>
+  </div>
+  <div class="c3779">
+    <span id="ia3e6" class="c4374">三、总结</span>
+    <br/>
+  </div>
+  <div id="i5079" class="c4802">
+    <span id="i0j76" class="c7746">一个好的命令行界面是一种与计算机通信的出色表达方式，就像人类的文字一样。据说，“图形用户界面使简单的任务变得容易，而命令行界面使困难的任务变得成为可能”，“学习Shell”，开始了我们对命令行的基本语言的探索，包括命令的结构、文件系统导航、命令行编辑，以及为命令寻找帮助和文档。</span>
+  </div>
+  <div id="ivvdu" class="c4802">
+    <span id="icr9f" class="c8087">Git Bash是一个命令行工具，它提供了一个类Unix的Shell环境，以下为我学习的一些常见的Linux命令：</span>
+    <br id="i6c9k" class="c8105"/>
+    <span id="ibi7s" class="c8114">cd切换目标 如：进入D目录：cd /d；进入D目录下的子目录lk：cd /D/lk；</span>
+    <br id="i0gpg" class="c8105"/>
+    <span id="inbdd" class="c8114">ls ( list ) 查看当前目录下的内容</span>
+    <br id="inbdb" class="c8105"/>
+    <span id="ieiot" class="c8114">ls -al 包括隐藏文件和以 . 开头的文件</span>
+    <br id="iuv8l" class="c8105"/>
+    <span id="iqx9l" class="c8114">mkdir创建目录</span>
+    <br id="iqs72" class="c8105"/>
+    <span id="i7m2q" class="c8114">rmdir删除文件夹；或者rm -rf（目录可以有文件）</span>
+    <br id="iw0gw" class="c8105"/>
+    <span id="i1cnj" class="c8114">touch 创建文件：touch lk.txt</span>
+    <br id="iruog" class="c8105"/>
+    <span id="it6vh" class="c8114">cat 查看文件内容 :cat lk.txt</span>
+    <br id="ismel" class="c8105"/>
+    <span id="iolut" class="c8114">cp ( copy ) 复制文件</span>
+    <br id="icbdr" class="c8105"/>
+    <span id="ioqqc" class="c8114">cp -r A/* B 复制 A 文件夹下的所有子文件、目录到 B 文件夹</span>
+    <br id="iltq8" class="c8105"/>
+    <span id="ishhj" class="c8114">rm ( remove ) 删除文件</span>
+    <br id="ijrb5" class="c8105"/>
+    <span id="i2hie" class="c8114">mv ( move ) 移动文件或重命名</span>
+    <br id="i3dz8" class="c8105"/>
+    <span id="ij5tuo" class="c8114">将文件放入指定文件夹中： mv /d/*.后缀 文件夹名字</span>
+    <br id="itsjek" class="c8105"/>
+    <span id="i8dt9n" class="c8114">等等</span>
+  </div>
+</body>
 </html>
