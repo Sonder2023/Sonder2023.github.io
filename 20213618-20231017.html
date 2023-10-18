@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>本地视频播放器</title>
+	 <style>
+     button {
+               font-size:3em;
+	           display:inline-block;
+	           margin:1.5em;
+			   color:darkblue;
+			   border-bottom-color:LightSlateGray;
+	           border-radius:2em; 
+	           display:inline-block;
+	           box-shadow:2px 2px gray;
+			   
+			} 
+	input{
+	         font-size:2.5em;
+			 margin:0.2em;
+			 border-radius:2em; 
+			 background-color:lavender;
+	}
+
+	  #css  {
+               display: flex;
+               justify-content: center;
+               /* align-items: center; */
+             }
+	  #css1  {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+             }
+	#css2{
+	            width:7%;
+                height:75px;
+				align-items: center;
+              }
+    </style>
+</head>
+<body>
+    <div id="css">
+        <video id="myVideo" width="620" height="550" controls></video><br>
+    </div>
+    <div id="css1">
+        
+        <button onclick="playSelect()">播放</button>
+        <button onclick="pause()">暂停</button>
+        <button onclick="next()">下一个</button>
+    </div>
+	<div  id="css2" >
+	<input type="number" id="videoInput" min="0" max="6" placeholder="选择N:">
+	<input type="text" id="currentTime" placeholder="选择Time:" >
+	</div>
+    <script>
+        var videos = [
+                      "http://vjs.zencdn.net/v/oceans.mp4",
+		              "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",                               
+		              "https://media.w3.org/2010/05/sintel/trailer.mp4",
+					  "https://v-cdn.zjol.com.cn/277000.mp4",
+					  "https://v-cdn.zjol.com.cn/277001.mp4",
+					  "https://v-cdn.zjol.com.cn/277003.mp4",
+					  "https://v-cdn.zjol.com.cn/277001.mp4"
+        ];
+        var i = 0;
+        var videoPlayer = document.getElementById("myVideo");
+        var videoInput = document.getElementById("videoInput");
+		var currentTime=document.getElementById("currentTime");
+
+        function playSelect() {
+            var selectedVideo = parseInt(videoInput.value);
+            if (isNaN(selectedVideo) || selectedVideo < 0 || selectedVideo >= videos.length) {
+                alert("error!请选择要播放的视频编号（0~6）");
+                return;
+            }
+			play();
+			i = selectedVideo;
+            
+        	if(!parseInt (currentTime.value)){
+        	currentTime.value=0;
+            alert("error!请填写要播放的秒数");
+                return;
+        			}
+            videoPlayer.currentTime=currentTime.value ;
+            play();
+        }
+         
+        function play() {
+			
+            videoPlayer.src = videos[i];
+            videoPlayer.play();
+        }
+
+        function pause() {
+            videoPlayer.pause();
+        }
+
+        function next() {
+            i++;
+            if (i >= videos.length) {
+                i = 0;
+            }
+            play();
+        }
+    </script>
+</body>
+</html>
+
