@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -15,43 +14,51 @@
 	           box-shadow:2px 2px gray;
 			   
 			} 
-	input{
+	input{   
 	         font-size:2.5em;
-			 margin:0.2em;
+			 margin:1.25em; 
 			 border-radius:2em; 
 			 background-color:lavender;
-	}
+			 width:15%;
+			 height:75px; 
 
-	  #css  {
+	}
+      #videoNumber{
+	  background-color:gray; color: white;
+	  position: absolute;
+	  top: 10px; right: 10px;  
+	  font-size:2em;
+	  border-radius:0.5em; 
+	  }
+	  #currentTime1{
+	  background-color:gray; color:white;
+	  position: absolute; 
+	  top: 10px; left: 10px; 
+	  font-size: 2em; 
+	  border-radius:0.5em; 
+	   }
+
+	  #css,#css1   {
                display: flex;
                justify-content: center;
-               /* align-items: center; */
+               align-items: center; 
              }
-	  #css1  {
-               display: flex;
-               justify-content: center;
-               align-items: center;
-             }
-	#css2{
-	            width:7%;
-                height:75px;
-				align-items: center;
-              }
     </style>
 </head>
 <body>
     <div id="css">
         <video id="myVideo" width="520" height="450" controls></video><br>
+        <div id="videoNumber"></div>
+        <div id="currentTime1"></div>
     </div>
     <div id="css1">
         
         <button onclick="playSelect()">播放</button>
         <button onclick="pause()">暂停</button>
         <button onclick="next()">下一个</button>
-    </div>
-	<div  id="css2" >
-	<input type="number" id="videoInput" min="0" max="6" placeholder="选择N:">
-	<input type="text" id="currentTime" placeholder="选择Time:" >
+ 
+	   <input type="number" id="videoInput" min="0" max="2" placeholder="No:">
+	   <input type="text" id="currentTime" placeholder="选择Time:" >
 	</div>
     <script>
         var videos = [
@@ -63,28 +70,32 @@
         var i = 0;
         var videoPlayer = document.getElementById("myVideo");
         var videoInput = document.getElementById("videoInput");
-		var currentTime=document.getElementById("currentTime");
+        var currentTime=document.getElementById("currentTime");
+        var videoNumber = document.getElementById("videoNumber");
+        var currentTime1 = document.getElementById("currentTime1");
 
-        function playSelect() {
+        var browserWidth = document.body.clientWidth;
+        videoPlayer.style.width = browserWidth + "px";//视频全屏
+  
+         function playSelect() {
             var selectedVideo = parseInt(videoInput.value);
             if (isNaN(selectedVideo) || selectedVideo < 0 || selectedVideo >= videos.length) {
-                alert("error!请选择要播放的视频编号（0~6）");
+                alert("error!请选择要播放的视频编号（0~2）");
                 return;
             }
 			play();
 			i = selectedVideo;
             
-        	if(!parseInt (currentTime.value)){
-        	currentTime.value=0;
-            alert("error!请填写要播放的秒数");
+        	if(!parseInt(currentTime.value)){
+        		currentTime.value=0;
+                alert("error!请填写要播放的秒数");
                 return;
-        			}
-            videoPlayer.currentTime=currentTime.value ;
+        	}
+            videoPlayer.currentTime = currentTime.value;
             play();
         }
          
         function play() {
-			
             videoPlayer.src = videos[i];
             videoPlayer.play();
         }
@@ -100,6 +111,11 @@
             }
             play();
         }
+
+        setInterval(function(){
+            videoNumber.innerText = "NO." + i;
+            currentTime1.innerText = "Time：" + parseInt(videoPlayer.currentTime.toFixed(2)) + "s";
+        }, 100);
     </script>
 </body>
 </html>
