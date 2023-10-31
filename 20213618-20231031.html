@@ -1,0 +1,154 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>本地视频播放器</title>
+	<style>
+     button {
+               font-size:3em;
+	           display:inline-block;
+	           margin:1.5em;
+			   color:darkblue;
+			   border-bottom-color:LightSlateGray;
+	           border-radius:2em; 
+	           display:inline-block;
+	           box-shadow:2px 2px gray;
+			   
+			} 
+	input  {   
+	         font-size:2em;
+			 margin:0.5em; 
+			 /* border-radius:2em;  */
+			 background-color:#FFF ;
+			 width:15%;
+			 height:75px; 
+
+	}
+	  #duration {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+			background-color:gray; color:white;
+   }
+      #videoNumber{
+	  background-color:gray; color: white;
+	  position: absolute;
+	  top: 10px; right: 10px;  
+	  font-size:2em;
+	  border-radius:0.5em; 
+	  }
+	  #currentTime1{
+	  background-color:gray; color:white;
+	  position: absolute; 
+	  top: 10px; left: 10px; 
+	  font-size: 2em; 
+	  border-radius:0.5em; 
+	   }
+
+	  #css,#css1   {
+               display: flex;
+               justify-content: center;
+               align-items: center; 
+             }
+    </style>
+</head>
+<body>
+<div id="css">
+     <video id="myVideo" width="520" height="450" controls></video><br>
+	 <div id="videoNumber"></div>
+     <div id="currentTime1"></div> 
+    </div>
+    <div id="css1">
+        
+        <button onclick="playSelect()">播放</button>
+        <button onclick="pause()">暂停</button>
+        <button onclick="next()">下一个</button>
+        
+	    <input type="number" id="videoInput" min="0" max="6" placeholder="No:">
+	    <input type="text" id="currentTime" placeholder="选择Time:" >
+	</div>
+	<div id="duration"></div> 
+    <script>
+        var videos = [
+                      "video1/V1.mp4",
+                      "video1/V2.mp4",
+                      "video1/V3.mp4",
+              
+              
+        ];
+        var i = 0;
+        var videoPlayer = document.getElementById("myVideo");
+        var videoInput = document.getElementById("videoInput");
+		var currentTime=document.getElementById("currentTime");
+        var videoNumber = document.getElementById("videoNumber");
+        var currentTime1 = document.getElementById("currentTime1");
+
+      // var browserWidth = document.body.clientWidth;
+      //  videoPlayer.style.width = browserWidth + "px";//视频全屏
+  
+         function playSelect() {
+            var selectedVideo = parseInt(videoInput.value);
+            if (isNaN(selectedVideo) || selectedVideo < 0 || selectedVideo >= videos.length) {
+                alert("error!请选择要播放的视频编号（0~6）");
+                return;
+            }
+			play();
+			i = selectedVideo;
+            
+        	if(!parseInt(currentTime.value)){
+        		currentTime.value=0;
+                alert("error!请填写要播放的秒数");
+                return;
+        	}
+            videoPlayer.currentTime = currentTime.value;
+            play();
+        }
+         
+        function play() {
+            videoPlayer.src = videos[i];
+            videoPlayer.play();
+        }
+
+        function pause() {
+            videoPlayer.pause();
+        }
+
+        function next() {
+            i++;
+            if (i >= videos.length) {
+                i = 0;
+            }
+            play();
+        }
+
+        setInterval(function(){
+            videoNumber.innerText = "NO." + i+"/"+(videos.length-1);
+            currentTime1.innerText = "Time：" + parseInt(videoPlayer.currentTime.toFixed(2))+"s"+"/" +parseInt(videoPlayer.duration)+"s" ;
+
+        }, 100);
+        //自动生成10个按钮
+        var durationDom=[];
+		for(let i=0;i<10;i++){
+		   let tempDom=document.createElement('input');
+		   tempDom.type='button';
+		   tempDom.value+='No.'+(i+1);
+		   durationDom[i]=tempDom;
+		   document.getElementById('duration').appendChild(durationDom[i])
+		}
+		for(let i=0;i<10;i++){
+		durationDom[i].onclick=function(){
+        videoPlayer.currentTime=i * videoPlayer.duration/10;
+		};
+		}
+    </script>
+</body>
+</html>
+
+
+
+ <!-- "http://vjs.zencdn.net/v/oceans.mp4",
+ 		              "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",                               
+ 		              "https://media.w3.org/2010/05/sintel/trailer.mp4",
+ 					  "https://v-cdn.zjol.com.cn/277000.mp4",
+ 					  "https://v-cdn.zjol.com.cn/277001.mp4",
+ 					  "https://v-cdn.zjol.com.cn/277003.mp4",
+ 					  "https://v-cdn.zjol.com.cn/277001.mp4" -->
