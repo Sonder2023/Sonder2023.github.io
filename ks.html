@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podcasting Self-learning System</title>
 </head>
 <style>
@@ -64,6 +65,7 @@
         width: 60vh;
         height: 33.75vh;
         margin-top: 10vh;
+        margin-left: 45px;
         position: relative;
     }
     #main_right video,#main_right audio{
@@ -178,12 +180,12 @@
     .team{
         float: right;
         font-family:Poppins;
-        font-size: 1em;
+        font-size: 1.15em;
         font-weight: 550;
         color:gray;
     }
     hr {
-        background-color: #0e2244;
+        background-color: #24243d;
         height: 1.5px; /* 设置水平线的高度 */
         border: none; /* 去除默认的边框样式 */
         margin: 10px 0; /* 设置水平线的上下边距 */
@@ -213,11 +215,11 @@
     <div id="main">
         <div id="main_left">
             <div id="main_left_top">
-                <span>Self</span>
+                <span style="color:	#888888">Self</span>
             </div>
             <div id="main_left_bottom">
                 <div id="main_left_bottom_left">
-                    <span>Study</span>
+                    <span style="color:	#888888">Study</span>
                 </div>
                 <div id="main_left_bottom-right">
                     <img src="img/playButton.png" id="play">
@@ -239,16 +241,16 @@
             <!--视频控制-->
             <div id="footer_left_left">
                 <!--当前视频时间跳转与显示-->
-                <label>Current Second：</label>
+                <label style="color:#888888 ">Current Second：</label>
                 <input type="text" id="jumpTimeInput">
                 <input type="button" id="jumpTimeButton" value="Go">
-                <span id = "showTime">showTime</span>
+                <span id = "showTime" style="color:#888888 ">showTime</span>
                 <br>
                 <!--视频序号跳转与显示-->
-                <label>Current &nbsp; Order：</label>
+                <label style="color:#888888 ">Current &nbsp; Order：</label>
                 <input type="text" id="jumpOrderInput">
                 <input type="button" id="jumpOrderButton" value="Go">
-                <span id = "showOrder">showOrder</span>
+                <span id = "showOrder" style="color:#888888 ">showOrder</span>
                 <br>
             </div>
             <!--全屏-->
