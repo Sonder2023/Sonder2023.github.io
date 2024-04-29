@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width , initial-scale=1">
+  <title> "Image display" </title>
+ </head>
+ <style>
+     body{
+         text-align: center;
+     }
+     header{
+         border: 2px solid purple;
+         height: 10%;
+         background-color: #464685;
+         color: white;
+     }
+     nav{
+         padding: 10px;
+         border: 2px solid rebeccapurple;
+         height: 10%;
+     }
+     main{
+         height: 75%;
+         background-color: #4f4f88;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         gap: 20px;
+     }
+     .image-container {
+         text-align: center;
+     }
+     .image-container img {
+         max-width: 450px; /* 图片最大宽度，你可以根据需要调整 */
+         height: 400px;
+     }
+     footer{
+         border: 2px solid #603b86;
+         height: 10%;
+         color: white;
+         background-color: darkslateblue;
+     }
+     p#book,#statusInfo {
+         font-size: 1.8em;
+         letter-spacing: 0.2em;
+     }
+     button{
+         font-size: 2em;
+         border: none;
+         color: #e7e2e2;
+         background-color: #4f4f88;
+     }
+
+ </style>
+ <body>
+  <header>
+	  <p id="book">
+          Anime
+          display@Sonder2023
+    </p> 
+  </header>
+  <nav>
+    <button style="margin-left: -100px">
+        导航1
+    </button>
+      <button>
+          导航2
+      </button>
+      <button>
+          导航3
+      </button>
+  </nav>
+  <main id = 'main'>
+
+      <div class="image-container" style="margin: 10px">
+          <img src="https://admin.itsnicethat.com/images/j7JkcOGoWmyA_rOWPJ3tDva812w=/219604/format-webp%7Cwidth-1440/Monga_Design_Laro_Copyright__Monga_Design_2021_3.jpg" alt="Image 1">
+          <p>蒙加设计：拉罗（版权所有©蒙加设计，2021）</p>
+      </div>
+      <div class="image-container" style="margin: 10px">
+      <img src="https://admin.itsnicethat.com/images/n9YNathHWzGwuzNKbEKV5LY7_pg=/219612/format-webp%7Cwidth-1440/Monga-Design-Atlas-Sessions-Copyright--Monga-Design-2021.jpg" alt="Image 3">
+      <p>蒙加设计：拉罗（版权所有©蒙加设计，2021）</p>
+      </div>
+      <div class="image-container" style="margin: 10px">
+          <img src="https://admin.itsnicethat.com/images/mlNk7uxreQVQkKo4vJ_WtZ-lTWQ=/219608/format-webp%7Cwidth-1440/Monga_Design_Pray_Coffe_Bar_Copyright__Monga_Design_2021_1.jpg" alt="Image 2">
+          <p>蒙加设计：拉罗（版权所有©蒙加设计，2021）</p>
+      </div>
+
+
+  </main>
+  <footer>
+   <p id="statusInfo" >
+    CopyRight from 梁港莎 江西科技师范大学 2022--2025
+	 </p>
+  </footer>
+ <script >
+     const UI = {};
+     UI.deviceHeight=Window.deviceHeight;
+     UI.deviceWidth=Window.deviceWidth;
+     document.body.style.height = UI.deviceHeight + 'px';
+     document.body.style.fontSize = UI.deviceWidth/25 + 'px';
+ </script>
+ </body>
+</html>
